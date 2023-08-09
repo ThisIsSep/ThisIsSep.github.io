@@ -1,1 +1,26 @@
-<h1>the test site</h1>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(function(){
+      $('#submit_btn').on('click',()=>{
+        const searchform=$('#search_form');
+        searchform.toggleClass('active');
+
+        if(searchform.hasClass('active')){
+          setTimeout(()=>{
+            $('#search_input').focus();
+          },300)
+        }
+      });
+    })
+  </script>
+  <link rel="stylesheet" herf="style.css">
+</head>
+
+<body>
+  <form action="" method="get" id="search_form">
+    <input type="text" placeholder="Write Something" id="search_input">
+    <button type="button" id="submit_btn"></button>
+  </form>
+</body>
